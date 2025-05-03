@@ -32,7 +32,7 @@ export const ContactForm = () => {
       
       <div className="retro-border p-3 bg-retro-black mb-4">
         <Terminal
-          text="(right click) - delete the last combat move"
+          text="Enter your message below to communicate with the system operator."
           className="text-retro-light-brown mb-4"
           typeSpeed={20}
         />
@@ -40,7 +40,7 @@ export const ContactForm = () => {
         {status === 'success' ? (
           <div className="p-4 retro-border bg-retro-dark-brown">
             <Terminal
-              text=">> Message transmission successful. Awaiting further instructions."
+              text="Message transmission successful. Awaiting further instructions."
               className="text-retro-amber-light"
               typeSpeed={30}
             />
@@ -91,7 +91,7 @@ export const ContactForm = () => {
             
             {status === 'error' && (
               <div className="text-red-500 text-sm font-terminal">
-                >> Error: All fields required for transmission.
+                {">> Error: All fields required for transmission."}
               </div>
             )}
             

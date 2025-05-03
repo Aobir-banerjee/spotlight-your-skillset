@@ -10,62 +10,62 @@ import { RetroButton } from '@/components/RetroButton';
 const Index = () => {
   // Character Data
   const characterData = {
-    name: "DEVELOPER NAME",
-    title: "Software Engineer / Designer",
+    name: "AOBIR BANERJEE",
+    title: "Web Developer / Software Engineer",
     portrait: "/lovable-uploads/a8a647e5-9dc8-49a6-915f-905bc3eb4c14.png", // Using the uploaded image
     skills: [
       { name: "JavaScript", level: 5 },
       { name: "React", level: 4 },
-      { name: "TypeScript", level: 4 },
-      { name: "UI Design", level: 3 },
+      { name: "HTML/CSS", level: 4 },
+      { name: "Bootstrap", level: 4 },
       { name: "Node.js", level: 3 },
-      { name: "CSS", level: 4 }
+      { name: "MongoDB", level: 3 }
     ]
   };
 
   // Project Data
   const projectsData = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with product catalog, shopping cart, and secure checkout. Built with React, Node.js, and MongoDB for a seamless shopping experience with real-time inventory management.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Redux"],
+      title: "NoMad Dash",
+      description: "A travel and booking website that allows users to search for hotels, flights, and activities. Built with HTML, CSS, and JavaScript.",
+      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
       images: [{ 
         src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b", 
-        alt: "E-Commerce Platform Screenshot" 
+        alt: "NoMad Dash Screenshot" 
       }],
-      link: "#project-1"
+      link: "https://aobir-banerjee.github.io/Nomad-Dash/"
     },
     {
-      title: "Portfolio Website",
-      description: "A retro-styled portfolio inspired by classic text adventures and RPGs. Features a unique combat-sequence project showcase and inventory-style skills display.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      title: "Foodvaganza",
+      description: "A food delivery website that allows users to order food online from their favorite restaurants. Built with HTML, CSS, and JavaScript.",
+      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
       images: [{ 
         src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085", 
-        alt: "Portfolio Website Screenshot" 
+        alt: "Foodvaganza Screenshot" 
       }],
-      link: "#project-2"
+      link: "https://aobir-banerjee.github.io/Foodvaganza/"
     },
     {
-      title: "Mobile Task Tracker",
-      description: "A productivity app that gamifies task completion with experience points, levels, and achievements to make getting things done more fun and engaging.",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
+      title: "Retro Portfolio",
+      description: "A retro-styled portfolio website inspired by classic text adventures and RPGs. Features unique combat-sequence project showcases and inventory-style skills display.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn UI"],
       images: [{ 
         src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", 
-        alt: "Mobile App Screenshot" 
+        alt: "Portfolio Screenshot" 
       }],
-      link: "#project-3"
+      link: "#"
     }
   ];
 
   // About Content
-  const aboutContent = `I am a passionate developer with a background in both front-end and back-end technologies. My journey in software development began 5 years ago, and I've since worked on various projects ranging from e-commerce platforms to interactive web applications. I specialize in creating user-friendly interfaces that provide exceptional user experiences. When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community.`;
+  const aboutContent = `I'm a passionate web developer with a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React. After completing my education, I've been focused on creating intuitive and dynamic user experiences through clean code and modern design principles. I'm constantly learning new technologies and techniques to improve my skills and deliver better solutions.`;
 
   // Rituals (Interests/Hobbies)
   const rituals = [
-    "Open Source Contributing",
-    "Tech Blogging",
-    "UI/UX Research",
-    "Game Development"
+    "Web Development",
+    "UI/UX Design",
+    "Problem Solving",
+    "Learning New Technologies"
   ];
 
   const [loading, setLoading] = useState(true);
@@ -125,14 +125,14 @@ const Index = () => {
         
         <footer className="text-center text-retro-gray p-4 text-sm font-terminal">
           <div className="flex items-center justify-center gap-4 mb-2">
-            <RetroButton variant="outline" size="sm" onClick={() => window.open('#github', '_blank')}>
+            <RetroButton variant="outline" size="sm" onClick={() => window.open('https://github.com/aobir-banerjee', '_blank')}>
               GitHub
             </RetroButton>
-            <RetroButton variant="outline" size="sm" onClick={() => window.open('#linkedin', '_blank')}>
+            <RetroButton variant="outline" size="sm" onClick={() => window.open('https://www.linkedin.com/in/aobir-banerjee/', '_blank')}>
               LinkedIn
             </RetroButton>
-            <RetroButton variant="outline" size="sm" onClick={() => window.open('#twitter', '_blank')}>
-              Twitter
+            <RetroButton variant="outline" size="sm" onClick={() => window.open('mailto:aobir.banerjee@gmail.com', '_blank')}>
+              Email
             </RetroButton>
           </div>
           <div>© {new Date().getFullYear()} | CHARACTER STATUS: ONLINE</div>
