@@ -12,7 +12,7 @@ const Index = () => {
   const characterData = {
     name: "AOBIR BANERJEE",
     title: "Web Developer / Software Engineer",
-    portrait: "https://aobir-banerjee.github.io/my-portfolio/static/media/portrait-photo.e8bf3bb596d8399ed7d2.png", // Updated to use GitHub website image
+    portrait: "/lovable-uploads/63e872bd-1e01-40b4-aadf-ff0a1530cb8e.png", // Updated to use the newly uploaded image
     skills: [
       { name: "JavaScript", level: 5 },
       { name: "React", level: 4 },
