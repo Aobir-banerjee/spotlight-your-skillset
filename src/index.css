@@ -1,101 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 36 22% 13%;
+    --foreground: 39 40% 70%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 22% 13%;
+    --card-foreground: 39 40% 70%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 22% 13%;
+    --popover-foreground: 39 40% 70%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 39 100% 50%;
+    --primary-foreground: 36 22% 13%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 36 22% 20%;
+    --secondary-foreground: 39 40% 70%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 36 22% 20%;
+    --muted-foreground: 39 30% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 39 30% 50%;
+    --accent-foreground: 36 22% 13%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 36 22% 13%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 39 30% 30%;
+    --input: 39 30% 30%;
+    --ring: 39 100% 50%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23FFBF00' d='M0,0 L0,12 L5,7 L8,16 L11,15 L8,6 L14,6 L0,0'/%3E%3C/svg%3E"), auto;
+  }
+  
+  body {
+    @apply bg-retro-black text-retro-amber font-pixel;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  .retro-container {
+    @apply border-2 border-retro-border-brown bg-retro-dark-brown p-4;
+    box-shadow: 0 0 0 4px theme('colors.retro.black');
+  }
+
+  .retro-border {
+    @apply border-2 border-retro-border-brown;
+  }
+
+  .crt-screen {
+    @apply relative overflow-hidden;
+    &::before {
+      content: " ";
+      @apply absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none z-10;
+      background-size: 100% 2px;
+    }
+    &::after {
+      content: " ";
+      @apply absolute top-0 left-0 bottom-0 right-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] pointer-events-none z-10;
+    }
+  }
+
+  .scanline {
+    @apply absolute top-0 left-0 w-full h-[5px] bg-white/5 z-20 animate-scanline pointer-events-none;
+  }
+
+  .pixel-corners {
+    clip-path: 
+      polygon(
+        0px 4px,
+        4px 4px,
+        4px 0px,
+        calc(100% - 4px) 0px,
+        calc(100% - 4px) 4px,
+        100% 4px,
+        100% calc(100% - 4px),
+        calc(100% - 4px) calc(100% - 4px),
+        calc(100% - 4px) 100%,
+        4px 100%,
+        4px calc(100% - 4px),
+        0px calc(100% - 4px)
+      );
+  }
+
+  .textured-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z' fill='%23D2BC9B' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
 }
